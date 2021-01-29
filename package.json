@@ -1,0 +1,79 @@
+{
+  "name": "@4c/docusaurus-preset-docs",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4Catalyzer/docusaurus-preset-docs.git"
+  },
+  "author": "4Catalyzer",
+  "license": "MIT",
+  "scripts": {
+    "build": "4c build src",
+    "format": "4c format src './*'",
+    "lint": "4c lint src './*'",
+    "prepublishOnly": "yarn run build",
+    "release": "4c release",
+    "tdd": "jest --watch",
+    "test": "yarn lint && yarn typecheck && jest",
+    "testonly": "jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "prettier": "@4c/prettier-config",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "yarn 4c lint --fix",
+      "git add"
+    ]
+  },
+  "jest": {
+    "preset": "@4c/jest-preset",
+    "testEnvironment": "jsdom"
+  },
+  "release": {
+    "publishDir": "lib"
+  },
+  "devDependencies": {
+    "@4c/babel-preset": "^7.1.0",
+    "@4c/cli": "^2.0.1",
+    "@4c/jest-preset": "^1.4.5",
+    "@4c/prettier-config": "^1.1.0",
+    "@4c/tsconfig": "^0.3.1",
+    "@babel/preset-typescript": "^7.8.3",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "eslint-config-4catalyzer-jest": "^2.0.4",
+    "eslint-config-4catalyzer-react": "^1.0.3",
+    "eslint-config-4catalyzer-typescript": "^1.1.6",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.7.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^3.0.9",
+    "jest": "^26.0.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^2.0.1",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@docusaurus/plugin-content-docs": "^2.0.0-alpha.70",
+    "@docusaurus/plugin-debug": "^2.0.0-alpha.70",
+    "@docusaurus/plugin-sitemap": "^2.0.0-alpha.70",
+    "@docusaurus/theme-classic": "^2.0.0-alpha.70",
+    "@docusaurus/theme-search-algolia": "^2.0.0-alpha.70",
+    "docusaurus-plugin-react-metadata": "^1.0.1",
+    "docusaurus-theme-jarle-codeblock": "^1.0.1",
+    "es-module-lexer": "^0.3.26",
+    "unist-util-flatmap": "^1.0.0"
+  }
+}
