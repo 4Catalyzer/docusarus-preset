@@ -1,10 +1,10 @@
 {
-  "name": "@4c/docusaurus-preset-docs",
+  "name": "@4c/docusaurus-preset",
   "version": "1.0.0",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/4Catalyzer/docusaurus-preset-docs.git"
+    "url": "https://github.com/4Catalyzer/docusaurus-preset.git"
   },
   "author": "4Catalyzer",
   "license": "MIT",

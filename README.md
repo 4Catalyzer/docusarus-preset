@@ -1,4 +1,4 @@
-# @4c/docusaurus-preset-docs
+# @4c/docusaurus-preset
 
 Basically `@docusaurus/preset-classic` with some coordination between
 the MDX processing to enable static code fence import resolution.
