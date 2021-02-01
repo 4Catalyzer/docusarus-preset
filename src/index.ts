@@ -1,11 +1,13 @@
+/* eslint-disable global-require */
 interface Options {
   debug?: boolean;
-  theme?: Record<string, any>;
+  theme?: false | Record<string, any>;
   docs?: false | Record<string, any>;
   pages?: false | Record<string, any>;
   sitemap?: false | Record<string, any>;
   reactMetadata?: Record<string, any>;
   resolveReact?: boolean;
+  customCss?: string;
 }
 
 module.exports = function preset(context: any, opts: Options = {}) {
@@ -15,15 +17,21 @@ module.exports = function preset(context: any, opts: Options = {}) {
   const isProd = process.env.NODE_ENV === 'production';
 
   const debug = opts.debug != null ? !!opts.debug : !isProd;
+  const includeTheme = opts.theme !== false;
 
   return {
     themes: [
-      [require.resolve('@docusaurus/theme-classic'), opts.theme],
+      includeTheme && [
+        require.resolve('@docusaurus/theme-classic'),
+        opts.theme,
+      ],
       require.resolve('docusaurus-theme-jarle-codeblock'),
       require.resolve('./theme-plugin'),
       algolia && require.resolve('@docusaurus/theme-search-algolia'),
     ],
     plugins: [
+      !includeTheme &&
+        opts.customCss && [require.resolve('./custom-css'), opts],
       opts.resolveReact !== false && require.resolve('./resolve-react'),
       opts.docs !== false && [
         require.resolve('@docusaurus/plugin-content-docs'),
@@ -55,6 +63,7 @@ module.exports = function preset(context: any, opts: Options = {}) {
       [
         require.resolve('docusaurus-plugin-react-metadata'),
         {
+          watchPaths: [],
           ...opts.reactMetadata,
           mdx: {
             ...opts.reactMetadata?.mdx,
