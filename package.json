@@ -71,7 +71,6 @@
     "@docusaurus/plugin-content-pages": "^2.0.0-alpha.70",
     "@docusaurus/plugin-debug": "^2.0.0-alpha.70",
     "@docusaurus/plugin-sitemap": "^2.0.0-alpha.70",
-    "@docusaurus/theme-classic": "^2.0.0-alpha.70",
     "@docusaurus/theme-search-algolia": "^2.0.0-alpha.70",
     "docusaurus-plugin-react-metadata": "^1.0.2",
     "docusaurus-theme-jarle-codeblock": "^1.0.1",

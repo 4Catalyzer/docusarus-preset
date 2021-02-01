@@ -17,21 +17,15 @@ module.exports = function preset(context: any, opts: Options = {}) {
   const isProd = process.env.NODE_ENV === 'production';
 
   const debug = opts.debug != null ? !!opts.debug : !isProd;
-  const includeTheme = opts.theme !== false;
 
   return {
     themes: [
-      includeTheme && [
-        require.resolve('@docusaurus/theme-classic'),
-        opts.theme,
-      ],
+      opts.theme,
       require.resolve('docusaurus-theme-jarle-codeblock'),
       require.resolve('./theme-plugin'),
       algolia && require.resolve('@docusaurus/theme-search-algolia'),
     ],
     plugins: [
-      !includeTheme &&
-        opts.customCss && [require.resolve('./custom-css'), opts],
       opts.resolveReact !== false && require.resolve('./resolve-react'),
       opts.docs !== false && [
         require.resolve('@docusaurus/plugin-content-docs'),
