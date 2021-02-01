@@ -68,6 +68,7 @@
   },
   "dependencies": {
     "@docusaurus/plugin-content-docs": "^2.0.0-alpha.70",
+    "@docusaurus/plugin-content-pages": "^2.0.0-alpha.70",
     "@docusaurus/plugin-debug": "^2.0.0-alpha.70",
     "@docusaurus/plugin-sitemap": "^2.0.0-alpha.70",
     "@docusaurus/theme-classic": "^2.0.0-alpha.70",
