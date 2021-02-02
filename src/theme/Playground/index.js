@@ -1,5 +1,7 @@
+// eslint-disable-next-line import/no-unresolved
 import Playground from '@theme-original/Playground';
 import React from 'react';
+
 import { Context } from '../ImportContext';
 
 function PlaygroundWithImports(props) {
