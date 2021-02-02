@@ -14,9 +14,7 @@
     "lint": "4c lint src './*'",
     "prepublishOnly": "yarn run build",
     "release": "4c release",
-    "tdd": "jest --watch",
-    "test": "yarn lint && yarn typecheck && jest",
-    "testonly": "jest",
+    "test": "yarn lint && yarn typecheck",
     "typecheck": "tsc --noEmit"
   },
   "publishConfig": {

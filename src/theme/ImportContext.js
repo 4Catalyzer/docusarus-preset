@@ -13,6 +13,7 @@ export const allValues = (obj) => {
 
 export const Context = React.createContext();
 
-export default ({ imports, children }: any) => (
+// eslint-disable-next-line react/prop-types
+export default ({ imports, children }) => (
   <Context.Provider value={imports}>{children}</Context.Provider>
 );

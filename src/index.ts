@@ -70,8 +70,11 @@ export default function preset(context: any, opts: Options = {}) {
           },
           docgen: {
             resolver,
-            handlers: [handler],
             ...opts.reactMetadata?.docgen,
+            handlers: [
+              handler,
+              ...(opts.reactMetadata?.docgen?.handlers || []),
+            ],
           },
         },
       ],
