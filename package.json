@@ -75,6 +75,7 @@
     "docusaurus-plugin-react-metadata": "^1.0.2",
     "docusaurus-theme-jarle-codeblock": "^1.0.1",
     "es-module-lexer": "^0.3.26",
+    "react-docgen-styled-resolver": "^0.4.0",
     "unist-util-flatmap": "^1.0.0"
   }
 }

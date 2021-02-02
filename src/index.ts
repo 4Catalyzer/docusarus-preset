@@ -1,3 +1,5 @@
+import { handler, resolver } from 'react-docgen-styled-resolver';
+
 /* eslint-disable global-require */
 interface Options {
   debug?: boolean;
@@ -10,7 +12,7 @@ interface Options {
   customCss?: string;
 }
 
-module.exports = function preset(context: any, opts: Options = {}) {
+export default function preset(context: any, opts: Options = {}) {
   const { siteConfig = {} } = context;
   const { themeConfig } = siteConfig;
   const { algolia } = themeConfig;
@@ -66,8 +68,13 @@ module.exports = function preset(context: any, opts: Options = {}) {
               ...(opts.reactMetadata?.mdx?.remarkPlugins || []),
             ],
           },
+          docgen: {
+            resolver,
+            handlers: [handler],
+            ...opts.reactMetadata?.docgen,
+          },
         },
       ],
     ],
   };
-};
+}

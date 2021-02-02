@@ -1,12 +1,12 @@
-module.exports = () => async (tree) => {
+module.exports = () => (tree) => {
   const specifiers = tree.children
     .filter((n) => n.type === 'import' && n.value.includes('@react-metadata'))
     .map((n) => {
       const [, g] = n.value.match(
         /import\s+(\w+)\s+from\s+['"]@react-metadata\/.+['"]/,
-      )
-      return g
-    })
+      );
+      return g;
+    });
 
   if (specifiers.length) {
     tree.children.push({
@@ -24,8 +24,8 @@ module.exports = () => async (tree) => {
             })()}
           </>
         `,
-    })
+    });
   }
 
-  return tree
-}
+  return tree;
+};
