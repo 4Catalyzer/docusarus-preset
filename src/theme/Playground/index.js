@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-import Playground from '@theme-original/Playground';
+import Playground from 'docusaurus-theme-jarle-codeblock/lib/theme/Playground';
 import React from 'react';
 
 import { Context } from '../ImportContext';
