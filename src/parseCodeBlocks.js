@@ -17,7 +17,8 @@ const parseProps = (node) => {
   );
 };
 
-const reg = /import\s+?(?:(?:(?:[\w*\s{},]*)\s+from\s+?)|)(?:(?:".*?")|(?:'.*?'))[\s]*?(?:;|$|)/g;
+const reg =
+  /import\s+?(?:(?:(?:[\w*\s{},]*)\s+from\s+?)|)(?:(?:".*?")|(?:'.*?'))[\s]*?(?:;|$|)/g;
 
 module.exports = () => async (tree, file) => {
   await init;
