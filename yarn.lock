@@ -2328,10 +2328,10 @@
     url-loader "^4.1.1"
     webpack "^5.28.0"
 
-"@docusaurus/module-type-aliases@^2.0.0-alpha.70":
-  version "2.0.0-alpha.70"
-  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-alpha.70.tgz#2e50770c54cb465302d0a779fb76c163a1fc94e2"
-  integrity sha512-ESAY5ZU7uGRhZwbyxyGdvAAP+3D/oewSmtsWdvdhc8V9PPxVJCXc06zxXunfEzutVtOd4iZkQsuWgXAhtFa63g==
+"@docusaurus/module-type-aliases@^2.0.0-beta.0":
+  version "2.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-beta.0.tgz#e018adfe3c8834c526ca687eed3cbc87569a47a7"
+  integrity sha512-Yj+7hjy5pCK4DQ3l2JDGBF4bMY63MV/z18WK7REHniyqC66IJQT+0Gpb6Q+Oz8e2Og8AsyWIbfTXvsFWK0UhJA==
 
 "@docusaurus/plugin-content-blog@2.0.0-beta.0":
   version "2.0.0-beta.0"
@@ -5957,12 +5957,12 @@ docusaurus-plugin-react-metadata@^1.1.0:
     react-docgen "^5.3.1"
     tiny-case "^1.0.2"
 
-docusaurus-theme-jarle-codeblock@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/docusaurus-theme-jarle-codeblock/-/docusaurus-theme-jarle-codeblock-1.1.0.tgz#b4e4d516177df04ae4b6e4878deae95816c8f75e"
-  integrity sha512-RfTOJX78AHTkT04NPgZRuPZ2A+roTKwfdS0OqoW76Wx/nqqJVl9aiy8nzbEscX4Ml+hRWO1V2en9p8TATcB5yg==
+docusaurus-theme-jarle-codeblock@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/docusaurus-theme-jarle-codeblock/-/docusaurus-theme-jarle-codeblock-1.1.1.tgz#957350ccb33236200153af7e107a4b06eb8db772"
+  integrity sha512-HFEUG/YV5iNhRfbvJUYqnIq4n4ERdthX+1jkNTcTJ4u/XYgKQbB5TEqX9mMxtUUm5Bm3O9Ju09+vf+s8iCjsYw==
   dependencies:
-    "@docusaurus/module-type-aliases" "^2.0.0-alpha.70"
+    "@docusaurus/module-type-aliases" "^2.0.0-beta.0"
     clsx "^1.1.1"
     jarle "^1.1.0"
 
@@ -6417,10 +6417,10 @@ eslint-plugin-import@^2.23.4:
     resolve "^1.20.0"
     tsconfig-paths "^3.9.0"
 
-eslint-plugin-jest@^24.1.3:
-  version "24.1.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-24.1.3.tgz#fa3db864f06c5623ff43485ca6c0e8fc5fe8ba0c"
-  integrity sha512-dNGGjzuEzCE3d5EPZQ/QGtmlMotqnYWD/QpCZ1UuZlrMAdhG5rldh0N0haCvhGnUkSeuORS5VNROwF9Hrgn3Lg==
+eslint-plugin-jest@^24.3.6:
+  version "24.3.6"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-24.3.6.tgz#5f0ca019183c3188c5ad3af8e80b41de6c8e9173"
+  integrity sha512-WOVH4TIaBLIeCX576rLcOgjNXqP+jNlCiEmRgFTfQtJ52DpwnIQKAVGlGPAN7CZ33bW6eNfHD6s8ZbEUTQubJg==
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.0.1"
 
