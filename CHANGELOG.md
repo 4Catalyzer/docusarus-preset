@@ -1,3 +1,14 @@
+## [0.2.7](https://github.com/4Catalyzer/docusaurus-preset/compare/v0.2.6...v0.2.7) (2021-07-08)
+
+
+### Bug Fixes
+
+* resolve runtimes ([a61b7f6](https://github.com/4Catalyzer/docusaurus-preset/commit/a61b7f65957c8d69132faa93cd6e974f0981322b))
+
+
+
+
+
 ## [0.2.6](https://github.com/4Catalyzer/docusaurus-preset/compare/v0.2.5...v0.2.6) (2021-07-08)
 
 
