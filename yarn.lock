@@ -6148,10 +6148,10 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-docusaurus-plugin-react-metadata@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/docusaurus-plugin-react-metadata/-/docusaurus-plugin-react-metadata-1.4.1.tgz#ba2138c1403e01183e18420e13f6ac24e98d0fb6"
-  integrity sha512-kkjFFQSeZ/kQ9MNF1bqTwXbSJ68ZMn8kBIL810AwKv3xiasJIEn6QdW2jbi1CvFDHfZH1RgNLsr6zON2A4pOCw==
+docusaurus-plugin-react-metadata@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-react-metadata/-/docusaurus-plugin-react-metadata-1.4.2.tgz#3f96c73d9709c9e3da68c3dcaa8393474d4c4db3"
+  integrity sha512-ATQ7ifRx+clMJiMXFlRkqFrKZVtBvgI8m/RJ7fLms64L2ZfNwn56g5E8jF2wjk69UCks/M/3/bPjr/QNgNumhg==
   dependencies:
     "@docusaurus/types" "^2.0.0-beta.4"
     "@mdx-js/mdx" "^1.6.22"
