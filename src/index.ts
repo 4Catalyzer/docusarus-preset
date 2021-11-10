@@ -20,6 +20,8 @@ export default function preset(context: any, opts: Options = {}) {
 
   const debug = opts.debug != null ? !!opts.debug : !isProd;
 
+  const reactMetadata = ([] as any[]).concat(opts.reactMetadata || null);
+
   return {
     themes: [
       opts.theme,
@@ -56,28 +58,26 @@ export default function preset(context: any, opts: Options = {}) {
           require.resolve('@docusaurus/plugin-sitemap'),
           opts.sitemap,
         ],
-      [
+
+      ...reactMetadata.map((config) => [
         require.resolve('docusaurus-plugin-react-metadata'),
         {
           watchPaths: [],
-          ...opts.reactMetadata,
+          ...config,
           mdx: {
-            ...opts.reactMetadata?.mdx,
+            ...config?.mdx,
             remarkPlugins: [
               require('./parseCodeBlocks'),
-              ...(opts.reactMetadata?.mdx?.remarkPlugins || []),
+              ...(config?.mdx?.remarkPlugins || []),
             ],
           },
           docgen: {
             resolver,
-            ...opts.reactMetadata?.docgen,
-            handlers: [
-              handler,
-              ...(opts.reactMetadata?.docgen?.handlers || []),
-            ],
+            ...config?.docgen,
+            handlers: [handler, ...(config?.docgen?.handlers || [])],
           },
         },
-      ],
+      ]),
     ],
   };
 }
